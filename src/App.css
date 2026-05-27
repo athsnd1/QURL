@@ -1,0 +1,139 @@
+:root{
+    --main-color: rgb(5, 5, 109);
+    --main-bg: aliceblue;
+    --outline-color:rgb(5,5,109);
+    --btn-bg:rgb(5,5,109);
+    --btn-color:white;
+}
+
+[data-theme="dark"]{
+    --main-color:aliceblue;
+    --main-bg:rgb(1, 1, 24);
+    --outline-color:blue;
+    --btn-bg:rgb(5,5,109);
+    --btn-color:white;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("./assets/Poppins-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Google Sans Code";
+    src: url("./assets/GoogleSansCode-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+body{
+    background-color: var(--main-bg);
+    margin:0;
+    font-family: Poppins, system-ui, "Segoe UI";
+    transition: background-color 0.4s ease;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:1rem;
+    padding-left:4rem;
+}
+
+.qurl-logo{
+    font-size:3rem;
+    font-weight: 700;
+    color:var(--main-color);
+}
+
+.theme-icons{
+    width:32px;
+    height:32px;
+    padding-right:4rem;
+    margin-right:0.5rem;
+    cursor:pointer;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    &:hover{
+        opacity:0.9;
+        transform: scale(1.15);
+    }
+}
+
+.theme-icons .icons{
+    width:100%;
+    height: 100%;
+    color:var(--main-color);
+}
+
+h1{
+    font-family: "Google Sans Code", Poppins;
+    color:var(--main-color);
+    max-width: 30ch;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    min-width:300px;
+    width:500px;
+    padding:0.5rem;
+    margin:0.5rem auto;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+}
+
+.form input{
+    height:48px;
+    width:100%;
+    border-radius: 10px;
+    border:1px solid rgb(58, 58, 201);
+    transition: outline-color 0.4s ease;
+    padding-left:0.5rem;
+    font-family: "Google Sans Code", Poppins;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+    
+    &:focus{
+         border: 2px solid var(--main-color);
+         outline-color: var(--outline-color);
+    }
+}
+
+
+.qrcode-display-area{
+    width:256px;
+    height:256px;
+    border:4px dashed rgb(113, 113, 206);
+    margin:0.5rem auto;
+    border-radius: 10px;
+}
+
+.download-btn{
+    background-color: green;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    height:55px;
+    width:100%;
+    font-family: "Google Sans Code", Poppins;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    &:hover{
+        opacity:0.9;
+        transform: scale(1.015);
+    }
+}
